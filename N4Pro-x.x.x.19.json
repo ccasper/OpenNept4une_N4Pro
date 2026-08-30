@@ -1,0 +1,109 @@
+{
+	"before_layer_change_gcode": "",
+	"default_filament_profile": [
+		"Elegoo Generic PLA @0.4 nozzle"
+	],
+	"from": "User",
+	"host_type": "octoprint",
+	"inherits": "Elegoo Neptune 4 Pro 0.4 nozzle",
+	"machine_end_gcode": "Frame_Light_OFF\nPart_Light_OFF\nM400                    ; wait for buffer to clear\nTURN_OFF_HEATERS\nG92 E0                  ; zero the extruder\nG91                     ; Relative positioning\nG1 E-2 F2700            ; Retract a bit\nG1 X5 Y5 F3000          ; Wipe out\nG1 E-2 Z0.2 F1600       ; Retract and raise Z\nG1 Z4 F3000             ; Raise Z more\nG90                     ; Absolute positioning\nG1 X0 Y230            ; Present print\nM107                    ; turn off fan\nM84                     ; turn off steppers\nSET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=0\nM117",
+	"machine_max_acceleration_e": [
+		"2000",
+		"2000"
+	],
+	"machine_max_acceleration_extruding": [
+		"3000",
+		"3000"
+	],
+	"machine_max_acceleration_retracting": [
+		"3000",
+		"3000"
+	],
+	"machine_max_acceleration_travel": [
+		"3000",
+		"3000"
+	],
+	"machine_max_acceleration_x": [
+		"3000",
+		"3000"
+	],
+	"machine_max_acceleration_y": [
+		"3000",
+		"3000"
+	],
+	"machine_max_acceleration_z": [
+		"200",
+		"200"
+	],
+	"machine_max_jerk_e": [
+		"7",
+		"7"
+	],
+	"machine_max_jerk_x": [
+		"8",
+		"8"
+	],
+	"machine_max_jerk_y": [
+		"8",
+		"8"
+	],
+	"machine_max_jerk_z": [
+		"0.6",
+		"0.6"
+	],
+	"machine_max_speed_e": [
+		"45",
+		"45"
+	],
+	"machine_max_speed_x": [
+		"250",
+		"250"
+	],
+	"machine_max_speed_y": [
+		"250",
+		"250"
+	],
+	"machine_max_speed_z": [
+		"8",
+		"8"
+	],
+	"machine_start_gcode": ";Nozzle diameter = [nozzle_diameter]\n;Filament type = [filament_type]\n;Filament name = [filament_vendor] \n;Filament weight = [filament_density]\nPRINT_START BED_TEMP=[hot_plate_temp_initial_layer] EXTRUDER_TEMP=[nozzle_temperature_initial_layer] AREA_START={first_layer_print_min[0]},{first_layer_print_min[1]} AREA_END={first_layer_print_max[0]},{first_layer_print_max[1]} BED_HEAT_SOAK_MINUTES=0 BED_MESH=adaptive",
+	"max_layer_height": [
+		"0.3"
+	],
+	"name": "N4Pro-x.x.x.19",
+	"nozzle_height": "4",
+	"print_host": "192.168.86.19",
+	"printable_area": [
+		"0x0",
+		"235x0",
+		"235x235",
+		"0x235"
+	],
+	"printer_agent": "moonraker",
+	"printer_extruder_id": [
+		"1"
+	],
+	"printer_extruder_variant": [
+		"Direct Drive Standard"
+	],
+	"printer_settings_id": "N4Pro-x.x.x.19",
+	"printer_structure": "undefine",
+	"retraction_length": [
+		"0.3"
+	],
+	"retraction_minimum_travel": [
+		"2"
+	],
+	"retraction_speed": [
+		"40"
+	],
+	"thumbnails": "160x160/PNG",
+	"version": "1.9.0.2",
+	"wipe_distance": [
+		"1"
+	],
+	"z_hop": [
+		"0.2"
+	]
+}
